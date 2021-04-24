@@ -1,0 +1,25 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model List<goods>
+@{
+
+    <table class="table">
+        <tr>
+            <td>@Html.DisplayNameFor(Model=>Model.Name)</td>
+            <td>@Html.DisplayNameFor(Model=>Model.Price)</td>
+            <td></td>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                <td>@Html.DisplayFor(modelItem => item.Price)</td>
+                <td>@Html.ActionLink("add","", routeValues: new { goodsName = item.Name })</td>
+            </tr>
+        }
+    </table>
+
+
+
+}
