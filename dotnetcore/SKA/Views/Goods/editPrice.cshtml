@@ -1,25 +1,35 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
-@model List<goods>
-@{
+@model goods
 
+@{
+    var model = ViewBag.goods;
     <table class="table">
         <tr>
-            <td>@Html.DisplayNameFor(Model=>Model.Name)</td>
-            <td>@Html.DisplayNameFor(Model=>Model.Price)</td>
+            <td>Name</td>
+            <td>Price</td>
+            <td></td>
             <td></td>
         </tr>
-        @foreach (var item in Model)
+        @foreach (var item in model)
         {
-            <tr>
-                <td>@Html.DisplayFor(modelItem => item.Name)</td>
-                <td>@Html.DisplayFor(modelItem => item.Price)</td>
-                <td>@Html.ActionLink("add","", routeValues: new { goodsName = item.Name })</td>
-            </tr>
+        
+    <form asp-controller="Goods" asp-action="editPrice" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        
+    <tr>
+        
+            <td><input asp-for="Name" value="@item.Name" type="hidden">@item.Name</td>
+            <td><div class="form-group"><input asp-for="Price" value="@item.Price"><span asp-validation-for="Price" class="text-danger"></span></div></td>
+        
+            <td><input type="submit" value="save" class="btn btn-success"></td>
+        </tr>
+        
+    </form>
         }
     </table>
-
-
-
+}
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

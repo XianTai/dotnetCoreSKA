@@ -7,6 +7,7 @@
           <td>@Html.DisplayNameFor(Model => Model.Name)</td>
           <td>@Html.DisplayNameFor(Model => Model.Price)</td>
           <td>@Html.DisplayNameFor(Model => Model.num)</td>
+          <td>total sum</td>
           <td></td>
       </tr>
     @foreach (var item in Model)
@@ -14,7 +15,8 @@
   <tr>
       <td>@Html.DisplayFor(modelItem => item.Name)</td>
       <td>@Html.DisplayFor(modelItem => item.Price)</td>
-      <td>@Html.DisplayFor(modelItem => item.num)</td"col">
+      <td>@Html.DisplayFor(modelItem => item.num)</td>
+      <td>@Html.DisplayFor(modelitem=>item.total)</td>
       <td>@Html.ActionLink("delete", "deleteMyGoods", routeValues: new { item.Name })</td>
   </tr>
     }

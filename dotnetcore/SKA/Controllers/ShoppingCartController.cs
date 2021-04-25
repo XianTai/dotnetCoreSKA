@@ -34,13 +34,11 @@ namespace SKA.Controllers
         public IActionResult ShowgoodsinMyshoppingcart()
         {
             var mygoods = _shoppingService.getmygoodinshoppingcart();
-
             return View("MyGoods", mygoods);
         }
 
         public IActionResult deleteMyGoods(string Name)
         {
-            
             _shoppingService.deleteMyGoods(Name);
             return RedirectToAction("ShowgoodsinMyshoppingcart","ShoppingCart");
         }

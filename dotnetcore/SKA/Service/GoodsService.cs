@@ -21,9 +21,9 @@ namespace SKA.Service
            _goodsRepo.addGoods(goods);
         }
 
-        public void editPrice(goods goods)
+        public void updatePrice(goods goods)
         {
-            _goodsRepo.updatePrice(goods goods);
+            _goodsRepo.updatePrice(goods);
         }
     }
 }

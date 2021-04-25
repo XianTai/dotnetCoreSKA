@@ -736,23 +736,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ted.wang39\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\dotnetcoreSka\\dotnetcore\\SKA\\SKA.csproj",
+      "projectUniqueName": "D:\\project\\Csharp\\dotnetcoreSka\\dotnetcore\\SKA\\SKA.csproj",
       "projectName": "SKA",
-      "projectPath": "D:\\dotnetcoreSka\\dotnetcore\\SKA\\SKA.csproj",
-      "packagesPath": "C:\\Users\\ted.wang39\\.nuget\\packages\\",
-      "outputPath": "D:\\dotnetcoreSka\\dotnetcore\\SKA\\obj\\",
+      "projectPath": "D:\\project\\Csharp\\dotnetcoreSka\\dotnetcore\\SKA\\SKA.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "D:\\project\\Csharp\\dotnetcoreSka\\dotnetcore\\SKA\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\ted.wang39\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

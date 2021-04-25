@@ -11,6 +11,7 @@ namespace SKA.Repo
         IEnumerable<goods> getGoods();
         goods GetGoodsByName(string name);
         void addGoods(goods goods);
+        void updatePrice(goods goods);
     }
 
     public class goodsRepo : IgoodsRepo 
@@ -35,7 +36,7 @@ namespace SKA.Repo
 
         public IEnumerable<goods> getGoods()
         {
-            return goodsList;
+            return goodsList.OrderBy(o=>o.Name);
         }
 
         public goods GetGoodsByName(string name)
@@ -52,8 +53,7 @@ namespace SKA.Repo
 
         public void updatePrice(goods goods)
         {
-
-            goodsList.First(o => o.Name == goods.Name).Price = goods.Price;
+            goodsList.FirstOrDefault(o => o.Name == goods.Name).Price = goods.Price;
         }
 
     }
