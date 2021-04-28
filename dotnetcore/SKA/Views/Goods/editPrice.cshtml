@@ -1,35 +1,52 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@model goods
+﻿@*For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860*@
+
+@model IEnumerable<goods>
 
 @{
-    var model = ViewBag.goods;
-    <table class="table">
-        <tr>
-            <td>Name</td>
-            <td>Price</td>
-            <td></td>
-            <td></td>
-        </tr>
-        @foreach (var item in model)
-        {
-        
-    <form asp-controller="Goods" asp-action="editPrice" method="post">
-        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-        
-    <tr>
-        
-            <td><input asp-for="Name" value="@item.Name" type="hidden">@item.Name</td>
-            <td><div class="form-group"><input asp-for="Price" value="@item.Price"><span asp-validation-for="Price" class="text-danger"></span></div></td>
-        
-            <td><input type="submit" value="save" class="btn btn-success"></td>
-        </tr>
-        
-    </form>
-        }
-    </table>
+    //var model = ViewBag.goods;
+    @*<table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>*@
+            @foreach (var item in Model)
+            {
+                @await Html.PartialAsync("editpricePartialView", item)
+
+            }
+        @*</tbody>
+    </table>*@
 }
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
+
+@*@model goods
+    @{
+        List<goods> test = ViewBag.goods;
+        var first = test[0];
+    }*@
+
+@*<div class="form-group">
+        <form asp-controller="Goods" asp-action="AddGoods" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" >Name</label>
+                <input asp-for="Name">
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" for="price">Price</label>
+                <input asp-for="Price" id="price" type="text" value=@first.Price>
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <input type="submit" value="submit">
+        </form>
+    </div>*@
+@*@section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }*@

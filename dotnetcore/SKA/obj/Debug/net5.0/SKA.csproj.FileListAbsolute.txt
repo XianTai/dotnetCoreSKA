@@ -721,3 +721,5 @@ D:\project\Csharp\dotnetcoreSka\dotnetcore\SKA\bin\Debug\net5.0\zh-Hant\Microsof
 D:\project\Csharp\dotnetcoreSka\dotnetcore\SKA\obj\Debug\net5.0\SKA.Views.pdb
 D:\project\Csharp\dotnetcoreSka\dotnetcore\SKA\obj\Debug\net5.0\SKA.csproj.CopyComplete
 D:\project\Csharp\dotnetcoreSka\dotnetcore\SKA\obj\Debug\net5.0\SKA.genruntimeconfig.cache
+D:\dotnetcoreSka\dotnetcore\SKA\obj\Debug\net5.0\Razor\Views\Goods\editPrice.cshtml.g.cs
+D:\dotnetcoreSka\dotnetcore\SKA\obj\Debug\net5.0\Razor\Views\Goods\editpricePartialView.cshtml.g.cs

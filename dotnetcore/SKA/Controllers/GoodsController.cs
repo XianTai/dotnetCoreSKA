@@ -32,11 +32,18 @@ namespace SKA.Controllers
             
         }
 
+        public IActionResult editPricePartialView(goods goods)
+        {
+            return PartialView("editpricePartialView",goods);
+        }
+
         public IActionResult editPriceView()
         {
             var goods = _goodsRepo.getGoods();
-            ViewBag.goods = goods;
-            return View("editPrice");
+            //ViewBag.goods = goods;
+            //return View("AddGoods");
+            
+            return View("editprice", goods);
         }
 
         public IActionResult editPrice(goods goods)

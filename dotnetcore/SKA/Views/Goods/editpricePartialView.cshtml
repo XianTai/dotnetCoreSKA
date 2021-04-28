@@ -1,0 +1,24 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model goods
+@*@{
+        Layout = "~/Views/Goods/editPrice.cshtml";
+    }*@
+@{
+
+    <form asp-controller="Goods" asp-action="editPrice" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <table class="table">
+        <tr>
+            <td style="max-width: 10px"><input asp-for="Name" value="@Model.Name" type="hidden" >@Model.Name</td>
+            <td align="center"><label asp-for="Price" ></label>
+                <input asp-for="Price" value="@Model.Price" id="price">
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </td>
+            <td><input type="submit" value="save" class="btn btn-success"></td>
+        </tr>
+            </table>
+    </form>
+
+}
